@@ -1,0 +1,93 @@
+body {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #ffffff;
+    background-image: url('../imagenes/FONDO.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-attachment: fixed; 
+}
+
+.map{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.reservation-main {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px); 
+}
+
+.reservation-container {
+    background-color: #2b2b2b; 
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 700px;
+    width: 100%;
+}
+
+.reservation-container h1 {
+    text-align: center;
+    color: #ffd700; 
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.reservation-form .form-group {
+    margin-bottom: 20px;
+}
+
+.reservation-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #cccccc;
+}
+
+.reservation-form input[type="text"],
+.reservation-form input[type="tel"] {
+    width: calc(100% - 20px); 
+    padding: 12px 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #ffffff;
+    font-size: 1em;
+    box-sizing: border-box; 
+}
+
+.reservation-form input[type="text"]:focus,
+.reservation-form input[type="tel"]:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #8b4513; 
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+.submit-button:hover {
+    background-color: #a0522d;
+}
+

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos-SUMAQ</title>
+    <link rel="stylesheet" href="../css/productos.css">
+    <link rel="stylesheet" href="../css/Menu_footer.css"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <header>
+        <div class="container"> 
+            <nav>
+                <a href="index.html"><img class="img-logo" src="../imagenes/logo.png" alt="Logo de SUMAQ"></a>
+                
+                <div class="nav-right"> 
+                    <ul>
+                        <li><a href="sumaq1.html">SUMAQ</a></li>
+                        <li><a href="servicios.html">SERVICIOS</a></li>
+                        <li><a href="productos.html">PRODUCTOS</a></li>
+                    </ul>
+
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <img class="img-ig" src="../imagenes/ig.png" alt="img">
+                    </a>
+
+                    <a href="reservar.html" class="btn-reservar">RESERVAR</a>
+
+                    <button id="cart-icon" class="cart-icon">🛒 <span id="cart-count" class="cart-count">0</span></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de productos -->
+    <main>
+        <!-- Gaseosas -->
+        <section class="categoria">
+            <h2>Gaseosas</h2>
+            <div class="productos">
+                <div class="producto">
+                    <img src="../imagenes/fanta.jpg" alt="Fanta">
+                    <div class="caja">
+                        <h3>Fanta</h3>
+                        <p>Precio: s/<span class="product-price">1.50</span></p>
+                        <button class="add-to-cart-btn" data-name="Fanta" data-price="1.50" data-image="../imagenes/fanta.jpg">Agregar al Carrito</button>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <img src="../imagenes/pepsi.jpg" alt="Pepsi">
+                    <div class="caja">
+                        <h3>Pepsi</h3>
+                        <p>Precio: s/<span class="product-price">1.40</span></p>
+                        <button class="add-to-cart-btn" data-name="Pepsi" data-price="1.40">Agregar al Carrito</button>
+                    </div>
+                </div>
+                            
+
+                <div class="producto">
+                    <img src="../imagenes/inka.jpg" alt="Inca Kola">
+                    <div class="caja">
+                        <h3>Inca Kola</h3>
+                        <p>Precio: s/<span class="product-price">1.60</span></p>
+                        <button class="add-to-cart-btn" data-name="Inca Kola" data-price="1.60">Agregar al Carrito</button>
+                    </div>
+                </div>
+                    
+
+                <div class="producto">
+                    <img src="../imagenes/coca.jpg" alt="Coca-Cola">
+                    <div class="caja">
+                        <h3>Coca-Cola</h3>
+                        <p>Precio: s/<span class="product-price">1.50</span></p>
+                        <button class="add-to-cart-btn" data-name="Coca-Cola" data-price="1.50">Agregar al Carrito</button>
+                    </div>
+                </div>
+                    
+
+            </div>
+        </section>
+
+        <!-- Vinos -->
+        <section class="categoria">
+            <h2>Vinos</h2>
+                <div class="productos">
+                    <div class="producto">
+                        <img src="../imagenes/vino2.jpg" alt="Vino Tinto">
+                        <div class="caja">
+                            <h3>Vino Tinto Borgoña</h3>
+                            <p>Precio: s/<span class="product-price">15.00</span></p>
+                            <button class="add-to-cart-btn" data-name="Vino Tuyo Borgoña" data-price="15.00">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                
+                <div class="producto">
+                    <img src="../imagenes/vino4.jpg" alt="Vino Blanco">
+                    <div class="caja">
+                        <h3>Vino Blanco PROTOS</h3>
+                        <p>Precio: s/<span class="product-price">64.00</span></p>
+                        <button class="add-to-cart-btn" data-name="Vino Blanco PROTOS" data-price="64.00">Agregar al Carrito</button>
+                    </div>
+                </div>
+                    
+                <div class="producto">
+                    <img src="../imagenes/vinoTinto.jpg" alt="Vino Tinto">
+                    <div class="caja">
+                        <h3>Vino Tinto</h3>
+                        <p>Precio: s/<span class="product-price">16.00</span></p>
+                        <button class="add-to-cart-btn" data-name="Vino Tinto" data-price="16.00">Agregar al Carrito</button>
+                    </div>
+                </div>
+                    
+                <div class="producto">
+                    <img src="../imagenes/VinoBlanco.jpg" alt="Vino Blanco">
+                    <div class="caja">
+                        <h3>Vino Blanco</h3>
+                        <p>Precio: s/<span class="product-price">14.00</span></p>
+                        <button class="add-to-cart-btn" data-name="Vino Blanco" data-price="14.00">Agregar al Carrito</button>
+                    </div>
+                </div>
+                    
+            </div>
+        </section>
+
+        <!-- Licores -->
+        <section class="categoria">
+            <h2>Licores</h2>
+            <div class="productos">
+
+                <div class="producto">
+                    <img src="../imagenes/Whisky.jpg" alt="Whisky">
+                    <div class="caja">
+                        <h3>Whisky</h3>
+                        <p>Precio: s/<span class="product-price">20.00</span></p>
+                        <button class="add-to-cart-btn" data-name="Whisky" data-price="20.00">Agregar al Carrito</button>
+                    </div>
+                </div>
+                    
+
+                <div class="producto">
+                    <img src="../imagenes/R.jpg" alt="Whisky Blue Label">
+                    <div class="caja">
+                        <h3>Whisky</h3>
+                        <p>Precio: s/<span class="product-price">50.00</span></p>
+                        <button class="add-to-cart-btn" data-name="Whisky Blue Label" data-price="50.00">Agregar al Carrito</button>
+                    </div>
+                </div>
+                    
+
+                <div class="producto">
+                    <img src="../imagenes/Vodka.jpg" alt="Vodka">
+                    <div class="caja">
+                        <h3>Vodka</h3>
+                        <p>Precio: s/<span class="product-price">20.00</span></p>
+                        <button class="add-to-cart-btn" data-name="Vodka" data-price="20.00">Agregar al Carrito</button>
+                    </div>
+                </div>
+                    
+
+                <div class="producto">
+                    <img src="../imagenes/Vodka2.jpg" alt="Vodka ABSOLUT Lime">
+                    <div class="caja">
+                        <h3>Vodka ABSOLUT Lime</h3>
+                        <p>Precio: s/<span class="product-price">18.00</span></p>
+                        <button class="add-to-cart-btn" data-name="Vodka ABSOLUT Lime" data-price="18.00">Agregar al Carrito</button>
+                    </div>
+                </div>
+                    
+
+            </div>
+        </section>
+
+        <!-- Postres -->
+        <section class="categoria">
+            <h2>Postres</h2>
+            <div class="productos">
+                <div class="producto">
+                    <img src="../imagenes/Volcan-de-chocolate.jpg" alt="Cheesecake">
+                    <div class="caja">
+                        <h3>Volcán de Chocolate</h3>
+                        <p>Precio: s/<span class="product-price">4.00</span></p>
+                        <button class="add-to-cart-btn" data-name="Volcán de Chocolate" data-price="4.00">Agregar al Carrito</button>
+                    </div>
+                </div>
+                    
+                <div class="producto">
+                    <img src="../imagenes/Tiramisu.jpg" alt="Tres Leches">
+                    <div class="caja">
+                        <h3>Tiramisu</h3>
+                        <p>Precio: s/<span class="product-price">4.50</span></p>
+                        <button class="add-to-cart-btn" data-name="Tiramisu" data-price="4.50">Agregar al Carrito</button>
+                    </div>
+                </div>
+                    
+                <div class="producto">
+                    <img src="../imagenes/Flan.jpg" alt="Tres Leches">
+                    <div class="caja">
+                        <h3>Flan</h3>
+                        <p>Precio: s/<span class="product-price">5.50</span></p>
+                        <button class="add-to-cart-btn" data-name="Flan" data-price="5.50">Agregar al Carrito</button>
+                    </div>
+                </div>
+                    
+                <div class="producto">
+                    <img src="../imagenes/Crepe.jpg" alt="Tres Leches">
+                    <div class="caja">
+                        <h3>Crepe</h3>
+                        <p>Precio: s/<span class="product-price">2.50</span></p>
+                        <button class="add-to-cart-btn" data-name="Crepe" data-price="2.50">Agregar al Carrito</button>
+                    </div>
+                </div>
+                    
+            </div>
+        </section>
+        
+        <!-- Carrito de Compras -->
+        <div id="cart-sidebar" class="cart-sidebar">
+            <div class="cart-header">
+                <h2>Tu Carrito</h2>
+                <button id="close-cart-btn" class="close-cart-btn">&times;</button>
+            </div>
+            <ul id="cart-items" class="cart-items">
+                <!-- Los elementos del carrito se añadirán -->
+            </ul>
+            <div class="cart-summary">
+                <p>Total: s/<span id="cart-total">0.00</span></p>
+                <button id="checkout-btn" class="checkout-btn">Comprar</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container-footer"><span>Copyright 2025</span>
+            <nav> <a href="libroDeReclamaciones.html">Libro de reclamaciones</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+    <script src="../scrip.js/carrito.js"></script>
+    <script src="../scrip.js/cod.js"></script>
+</html>

@@ -1,0 +1,39 @@
+html, body {
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+    line-height: 1.6;
+    color: #333; 
+    font-family: Arial, sans-serif; 
+}
+
+.img-sumaq{
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
+
+    /* Estilos para la imagen de fondo */
+    background-image: url('../imagenes/FONDO.jpg'); 
+
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-attachment: fixed; 
+}
+
+#home{
+    display: flex;
+    flex-direction: column; 
+    min-height: 125vh;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-attachment: fixed; 
+    position: relative;
+
+    opacity: 0.1;
+}

@@ -1,0 +1,218 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #f0f0f0;
+    background-image: url('../imagenes/FONDO.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.hero-contact-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: transparent;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.hero-contact-section h1 {
+    font-size: 4em;
+    color: white;
+    margin: 0;
+}
+
+.contact-details-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    padding: 30px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.contact-image-container {
+    flex: 1 1 400px;
+    min-width: 300px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.img-restaurante {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    transition: transform 1s ease;
+}
+
+.img-restaurante:hover {
+    transform: scale(120%);
+}
+
+.contact-info-grid {
+    flex: 2 1 500px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.info-block {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.icon-contact {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.info-header h3 {
+    font-size: 1.8em;
+    color: white;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.info-content {
+    width: 100%;
+}
+
+.schedule-title {
+    font-size: 1.1em;
+    color: #ffcc00;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.schedule-title:first-child {
+    margin-top: 0;
+}
+
+.schedule-text {
+    font-size: 0.95em;
+    color: #e0e0e0;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.social-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    align-items: center;
+    justify-content: flex;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    padding: 8px 15px;
+}
+
+.social-link img {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+    object-fit: contain;
+}
+
+.whatsapp-link p {
+    margin: 0;
+    font-size: 1em;
+    white-space: nowrap;
+}
+
+.instagram-link img,
+.facebook-link img {
+    margin-right: 0;
+}
+
+.instagram-link,
+.facebook-link {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    border-radius: 50%;
+    justify-content: right;
+}
+
+.location-block .info-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.location-text {
+    font-size: 1em;
+    color: #e0e0e0;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.img-mapa {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    transition: transform 1s ease;
+}
+
+.img-mapa:hover {
+    transform: scale(130%);
+}
+
+.cart-item-image {
+    width: 4px;
+    height: 4px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+}
+
+img.zoom {
+    transition: transform 0.5s ease;
+    /* animación suave */
+}
+
+img.zoom:hover {
+    transform: rotateY(15deg);
+    /* agranda + rota 15° */
+}

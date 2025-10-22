@@ -1,0 +1,133 @@
+body {
+    background-color: black; /* Color de fondo sólido si la imagen no carga */
+    margin: 0; /* Elimina los márgenes predeterminados del navegador */
+    padding: 0; /* Elimina el relleno predeterminado del navegador */
+
+    /* Estilos para la imagen de fondo */
+    background-image: url('../imagenes/FONDO.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Escala la imagen para cubrir todo el elemento */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center; /* Centra la imagen de fondo */
+    background-attachment: fixed; /* Mantiene la imagen de fondo fija al hacer scroll */
+}
+
+.SUMAQ {
+    text-align: center; /* Centra el texto dentro de este div */
+    padding: 50px 20px 30px; /* Relleno superior, lateral e inferior */
+    margin-bottom: 50px; /* Espacio debajo de este bloque */
+    max-width: 800px; /* Ancho máximo para el contenido de texto */
+    margin-left: auto; /* Centra el bloque horizontalmente */
+    margin-right: auto; /* Centra el bloque horizontalmente */
+}
+
+.SUMAQ h1 {
+    font-size: 50px;
+    color: white; /* Color de texto para el título */
+    margin-bottom: 15px; /* Espacio inferior para separar del párrafo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejor legibilidad */
+}
+
+.SUMAQ p {
+    /* Se eliminó 'position: absolute;' para que el párrafo fluya con el h1 */
+    font-size: 22px;
+    color: white; /* Color de texto para el párrafo */
+    line-height: 1.5; /* Altura de línea para mejor legibilidad */
+    margin-top: 0; /* Asegura que no haya margen superior adicional del párrafo */
+}
+
+/*
+ * ========================================
+ * Estilos para la Imagen de Servicios
+ * ========================================
+ */
+.img-servicios {
+    display: block; /* Asegura que la imagen se comporte como un bloque para centrarla */
+    max-width: 90%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-left: auto; /* Centra la imagen horizontalmente */
+    margin-right: auto; /* Centra la imagen horizontalmente */
+    margin-bottom: 80px; /* Espacio debajo de la imagen */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    box-shadow: 0 4px 10px rgba(219, 163, 77, 0.5); /* Sombra para darle profundidad */
+    
+    
+    opacity: 0;
+    transform: translateY(20px);
+    
+    /* Transiciones para animaciones suaves y efecto hover */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 0.3s ease;
+    cursor: pointer; /* Indica que el elemento es interactivo */
+    position: relative; /* Necesario para z-index al superponerse en hover */
+    z-index: 1; /* Z-index por defecto */
+}
+.img-servicios.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Efecto hover para los ítems de características */
+.img-servicios:hover {
+    transform: scale(1.15) translateY(-5px); /* Escala y eleva ligeramente */
+    box-shadow: 0 10px 25px rgba(134, 93, 4, 0.932); /* Sombra más prominente con color dorado en hover */
+    z-index: 10; /* Trae el ítem al frente al hacer hover */
+}
+
+
+
+
+/*
+ * ========================================
+ * Estilos para el Contenedor Central de Navegación
+ * ========================================
+ */
+.container-center {
+    display: flex; /* Habilita Flexbox */
+    justify-content: center; /* Centra los ítems horizontalmente */
+    align-items: center; /* Centra los ítems verticalmente */
+    padding: 80px 20px; /* Relleno superior/inferior y lateral */
+    margin-bottom: 100px; /* Espacio debajo del contenedor */
+    background-color: transparent; /* Fondo transparente */
+}
+
+.container-center nav ul {
+    list-style: none; /* Elimina los puntos predeterminados de la lista */
+    padding: 0; /* Elimina el padding predeterminado de la lista */
+    margin: 0; /* Elimina el margen predeterminado de la lista */
+    display: flex; /* Habilita Flexbox para los ítems de la lista */
+    flex-wrap: wrap; /* Permite que los ítems se envuelvan en pantallas pequeñas */
+    justify-content: center; /* Centra los ítems de la lista */
+}
+
+.container-center nav ul li {
+    font-size: 30px; /* Tamaño de fuente para los ítems de la lista */
+    /*
+     * Corrección de márgenes: Se usa una sola propiedad 'margin' para evitar conflictos.
+     * El 'padding' se usa para el espacio interno del 'li'.
+     */
+    margin: 0 10px; /* Espacio horizontal entre los ítems de la lista */
+    padding: 20px 25px; /* Relleno interno de cada ítem */
+    border-radius: 5px; /* Bordes redondeados */
+    
+}
+
+.container-center nav ul li:hover {
+    background-color: rgba(60, 60, 60, 0.9); /* Fondo más oscuro en hover */
+    transform: translateY(-3px); /* Pequeño levantamiento en hover */
+}
+
+.container-center nav ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: rgb(220, 211, 203); /* Color de texto de los enlaces */
+    white-space: nowrap; /* Evita que el texto del enlace se rompa en varias líneas */
+}
+
+/* Estilos específicos para la línea divisoria */
+.line {
+    border-right: solid 2px rgb(220, 211, 203); /* Borde derecho como divisor */
+}
+
+/* Asegura que el último elemento no tenga la línea */
+.none-line {
+    border-right: none;
+}

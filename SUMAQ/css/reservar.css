@@ -1,0 +1,220 @@
+body {
+
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: rgb(220, 211, 203);
+        /* Estilos para la imagen de fondo */
+    background-image: url('../imagenes/FONDO.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-attachment: fixed; 
+}
+
+
+.sumaq-header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sumaq-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    display: block; 
+}
+
+.sumaq-logo span {
+    display: block;
+    font-size: 0.6em;
+    font-weight: normal;
+    color: #cccccc;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #aa662e; 
+}
+
+.nav-links .instagram-icon {
+    height: 20px;
+}
+
+.nav-links .contact-button {
+    background-color: #8b4513;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-links .contact-button:hover {
+    background-color: #a0522d;
+}
+
+
+.reservation-main {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px); 
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 10px 100%; 
+}
+
+.reservation-container {
+    background-color: #2b2b2b; 
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 700px;
+    width: 100%;
+}
+
+.reservation-container h1 {
+    text-align: center;
+    color: white; 
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.reservation-form .form-group {
+    margin-bottom: 20px;
+}
+
+.reservation-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: white;
+}
+
+.reservation-form input[type="date"],
+.reservation-form input[type="time"],
+.reservation-form input[type="number"],
+.reservation-form input[type="text"],
+.reservation-form input[type="email"],
+.reservation-form input[type="tel"] {
+    width: calc(100% - 20px); 
+    padding: 12px 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 1em;
+    box-sizing: border-box; 
+}
+
+.reservation-form input[type="date"]:focus,
+.reservation-form input[type="time"]:focus,
+.reservation-form input[type="number"]:focus,
+.reservation-form input[type="text"]:focus,
+.reservation-form input[type="email"]:focus,
+.reservation-form input[type="tel"]:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
+}
+
+.reservation-form small {
+    display: block;
+    margin-top: 5px;
+    color: white;
+    font-size: 0.8em;
+}
+
+.table-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    gap: 21px;
+    margin-top: 10px;
+}
+
+.table-grid input[type="radio"] {
+    display: none;
+}
+
+.table-grid label {
+    background-color: #444;
+    color: white;
+    padding: 15px 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border: 1px solid #444; 
+    font-weight: normal; 
+}
+
+.table-grid label:hover {
+    background-color: #555;
+    border-color: #ffd700;
+}
+
+.table-grid input[type="radio"]:checked + label {
+    background-color: #8b4513; 
+    border-color: #ffd700;
+    color: #ffffff;
+    box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.5);
+}
+
+.table-grid label.unavailable {
+    background-color: #666;
+    color: #bbb;
+    cursor: not-allowed;
+    opacity: 0.7;
+    border-color: #666;
+}
+
+.table-grid input[type="radio"]:disabled + label {
+    background-color: #666;
+    color: #bbb;
+    cursor: not-allowed;
+    opacity: 0.7;
+    border-color: #666;
+}
+
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #8b4513; 
+    color:  rgb(220, 211, 203);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+.submit-button:hover {
+    background-color: #a0522d;
+}
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios-SUMAQ</title>
+    <link rel="stylesheet" href="../css/servicios.css">
+    <link rel="stylesheet" href="../css/Menu_footer.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html"><img class="img-logo" src="../imagenes/logo.png" alt="Logo de SUMAQ"></a>
+
+                <div class="nav-right">
+                    <ul>
+                        <li><a href="sumaq1.html">SUMAQ</a></li>
+                        <li><a href="servicios.html">SERVICIOS</a></li>
+                        <li><a href="productos.html">PRODUCTOS</a></li>
+                    </ul>
+
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <img class="img-ig" src="../imagenes/ig.png" alt="img">
+                    </a>
+
+                    <a href="reservar.html" class="btn-reservar">RESERVAR</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="SUMAQ">
+            <h1>Servicios Sumaq</h1>
+            <p>En Sumaq ofrecemos una variedad de servicios para que disfrutes de una experiencia única. </p>
+        </div>
+        <img class="img-servicios" src="../imagenes/servicios.png" alt="Servicios de SUMAQ"
+            style="align-items: center;">
+
+
+        <div class="container-center">
+            <nav>
+                <div class="nav-right">
+                    <ul>
+                        <li class="line"><a href="carta.html">Ver Carta</a></li>
+                        <li class="line"><a href="delivery.html">Delivery</a></li>
+                        <li class="none-line"><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container-footer"><span>Copyright 2025</span>
+            <nav>
+                <a href="libroDeReclamaciones.html">Libro de reclamaciones</a>
+            </nav>
+        </div>
+    </footer>
+    <script>
+        window.onload = function () {
+            const heroImageContainer = document.querySelector('.hero-image-container');
+            const heroTextContainer = document.querySelector('.hero-text');
+            if (heroImageContainer) {
+                heroImageContainer.classList.add('show');
+            }
+            if (heroTextContainer) {
+                heroTextContainer.classList.add('show');
+            }
+
+            const servicioImgs = document.querySelectorAll('.img-servicios');
+
+            servicioImgs.forEach((img, index) => {
+                setTimeout(() => {
+                    img.classList.add('show');
+                }, 500 + (index * 300)); // efecto en cascada
+            });
+        };
+    </script>
+
+</body>
+
+</html>

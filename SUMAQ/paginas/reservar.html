@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUMAQ - Reservas</title>
+    <link rel="stylesheet" href="../css/reservar.css">
+    <link rel="stylesheet" href="../css/Menu_footer.css"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+    </head>
+<body>
+
+    <header>
+        <div class="container"> 
+            <nav>
+                <a href="index.html"><img class="img-logo" src="../imagenes/logo.png" alt="Logo de SUMAQ"></a>
+                
+                <div class="nav-right"> 
+                    <ul>
+                        <li><a href="sumaq1.html">SUMAQ</a></li>
+                        <li><a href="servicios.html">SERVICIOS</a></li>
+                        <li><a href="productos.html">PRODUCTOS</a></li>
+                    </ul>
+
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <img class="img-ig" src="../imagenes/ig.png" alt="img">
+                    </a>
+
+                    <a href="reservar.html" class="btn-reservar">RESERVAR</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="reservation-main">
+        <div class="reservation-container">
+            <h1>Realiza tu Reserva</h1>
+            <form class="reservation-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="reservation-date">Fecha:</label>
+                    <input type="date" id="reservation-date" name="reservation_date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reservation-time">Hora:</label>
+                    <input type="time" id="reservation-time" name="reservation_time" min="12:00" max="22:00" required>
+                    <small>Horario de atención: 12:00 PM - 10:00 PM</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="num-guests">Número de Personas:</label>
+                    <input type="number" id="num-guests" name="num_guests" min="1" max="10" value="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="table-selection">Selecciona tu Mesa:</label>
+                    <div class="table-grid">
+                        <input type="radio" id="table-1" name="table_number" value="1" required>
+                        <label for="table-1">Mesa 1</label>
+
+                        <input type="radio" id="table-2" name="table_number" value="2">
+                        <label for="table-2">Mesa 2</label>
+
+                        <input type="radio" id="table-3" name="table_number" value="3">
+                        <label for="table-3">Mesa 3</label>
+
+                        <input type="radio" id="table-4" name="table_number" value="4">
+                        <label for="table-4">Mesa 4</label>
+
+                        <input type="radio" id="table-5" name="table_number" value="5">
+                        <label for="table-5">Mesa 5</label>
+
+                        <input type="radio" id="table-6" name="table_number" value="6">
+                        <label for="table-6">Mesa 6</label>
+
+                        <input type="radio" id="table-7" name="table_number" value="7">
+                        <label for="table-7">Mesa 7</label>
+
+                        <input type="radio" id="table-8" name="table_number" value="8">
+                        <label for="table-8">Mesa 8</label>
+
+                        <input type="radio" id="table-9" name="table_number" value="9">
+                        <label for="table-9">Mesa 9</label>
+
+                        <input type="radio" id="table-10" name="table_number" value="10">
+                        <label for="table-10">Mesa 10</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="user-name">Nombre y Apellidos:</label>
+                    <input type="text" id="user-name" name="user_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="user-email">Correo Electrónico:</label>
+                    <input type="email" id="user-email" name="user_email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="user-phone">Teléfono:</label>
+                    <input type="tel" id="user-phone" name="user_phone">
+                </div>
+
+                <button type="submit" class="submit-button">Confirmar Reserva</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container-footer"><span>Copyright 2025</span>
+            <nav>
+                <a style="font-size: 18px;" href="libroDeReclamaciones.html">Libro de reclamaciones</a>
+            </nav>
+        </div>
+    </footer>
+
+    </body>
+</html>
+<script src="/script.js/validaciones.js"></script>

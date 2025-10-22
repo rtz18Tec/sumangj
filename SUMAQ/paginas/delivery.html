@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery-SUMAQ</title>
+        <link rel="stylesheet" href="../css/delivery.css"> 
+    <link rel="stylesheet" href="../css/Menu_footer.css"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container"> 
+            <nav>
+                <a href="index.html"><img class="img-logo" src="../imagenes/logo.png" alt="Logo de SUMAQ"></a>
+                
+                <div class="nav-right"> 
+                    <ul>
+                        <li><a href="sumaq1.html">SUMAQ</a></li>
+                        <li><a href="servicios.html">SERVICIOS</a></li>
+                        <li><a href="productos.html">PRODUCTOS</a></li>
+                    </ul>
+
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <img class="img-ig" src="../imagenes/ig.png" alt="img">
+                    </a>
+
+                    <a href="reservar.html" class="btn-reservar">RESERVAR</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<body>
+        <main class="reservation-main">
+        <div class="reservation-container">
+            <h1>Delivery</h1>
+            <form class="reservation-form" action="#" method="POST">
+
+                <div class="form-group">
+                    <label>Direccion:</label>
+                    <input type="text" name="user_adress" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Referencias del domicilio:</label>
+                    <input type="text" name="user_hause" required>
+                </div>
+
+                <div class="map">
+                    <label style="text-align: left;">Seleccionar ubicacion:</label>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.4194154846816!3d37.77492977975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f0f0f0f0%3A0x0!2zMzfCsDQ2JzI5LjgiTiAxMjLCsDI1JzA3LjkiVw!5e0!3m2!1ses!2s!4v1680000000000!5m2!1ses!2s" 
+                            width="600" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                            
+                        </iframe>
+                </div>
+
+                <div class="form-group">
+                    <label for="user-name">Nombre y Apellidos:</label>
+                    <input type="text" name="user_name" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="user-phone">Teléfono:</label>
+                    <input type="tel" name="user_phone">
+                </div>
+
+                <button src="/paginas/" type="submit" class="submit-button">Confirmar Pedido</button>
+            </form>
+        </div>
+    </main>
+</body>
+    <footer>
+        <div class="container-footer"><span>Copyright 2025</span>
+            <nav>
+                <a style="font-size: 18px;" href="libroDeReclamaciones.html">Libro de reclamaciones</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

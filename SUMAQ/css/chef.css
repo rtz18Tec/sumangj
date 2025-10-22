@@ -1,0 +1,227 @@
+body {
+    background-color: transparent; 
+    margin: 0; 
+    padding: 0;
+    color: #f0f0f0; 
+
+    /* Estilos para la imagen de fondo */
+    background-image: url('../imagenes/FONDO.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-attachment: fixed; 
+    
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+.cheff{
+    display: flex !important;
+    
+}
+.timeline-slide{
+    margin-bottom: 150px;
+    margin-left: 10px !important;
+}
+main {
+    flex-grow: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.chef-bio-section {
+    padding: 20px 0; 
+    margin-bottom: 50px;
+    background-color: transparent; 
+    border-radius: 10px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-chef {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 20px;
+
+    max-width: 90%; 
+    margin: 0 auto;
+}
+
+.cont-chef img {
+    max-width: 100%; 
+    width: 400px; 
+    border-radius: 10px;
+
+}
+
+.cont-chef .text {
+    text-align: justify; 
+    color: white;
+}
+
+.chef-bio-section .text h1{
+    font-size: 60px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.cont-chef .text p {
+    font-size: 1.3em;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.cont-chef .text .chef-name {
+    font-size: 2.9em;
+    font-weight: bold;
+    color: white;
+    display: block;
+    margin: 7px 0;
+    text-align: center;
+}
+
+.alta-cocina-videos {
+    margin-bottom: 50px;
+    padding: 30px 0;
+}
+
+.alta-cocina-videos h2 {
+    font-size: 3.5em;
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 40px;
+    
+}
+
+.videos-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.video-responsive {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin: 0;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.video-responsive video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: cover;
+}
+
+
+.container-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+    .cont-chef {
+        flex-direction: row; /* En pantallas más grandes, la imagen y el texto en fila */
+        text-align: left; /* Alinea el texto a la izquierda en modo fila */
+        align-items: flex-start; /* Alinea los ítems al inicio en modo fila */
+    }
+
+    .cont-chef img {
+        margin-right: 30px; /* Espacio a la derecha de la imagen */
+    }
+
+    .cont-chef .text .chef-name {
+        text-align: left; /* Alinea el nombre a la izquierda */
+    }
+
+    .videos-flex {
+        /* Para 2 columnas en tabletas, por ejemplo */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .cont-chef img {
+        width: 80%; /* Imagen más grande en móviles */
+        max-width: 300px; /* Límite para que no sea excesivamente grande */
+    }
+
+    .cont-chef .text p {
+        font-size: 1em;
+    }
+
+    .cont-chef .text .chef-name {
+        font-size: 2em;
+    }
+
+    .alta-cocina-videos h2 {
+        font-size: 2.5em;
+        margin-bottom: 25px;
+    }
+
+    .video-responsive {
+        max-width: 90%; /* Videos ocupan más espacio en móviles */
+        padding-bottom: 56.25%; /* Mantener 16:9 */
+    }
+
+    .container-center nav ul {
+        flex-direction: column; /* Apila los enlaces de navegación secundaria en móviles */
+        gap: 15px; /* Reduce el espacio */
+    }
+
+    .container-center nav ul li a {
+        font-size: 1.2em;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 20px 10px;
+    }
+
+    .chef-bio-section {
+        padding: 15px 0;
+    }
+
+    .cont-chef {
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .cont-chef .text p {
+        font-size: 0.9em;
+    }
+
+    .cont-chef .text .chef-name {
+        font-size: 1.8em;
+    }
+
+    .alta-cocina-videos h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+}

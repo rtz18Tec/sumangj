@@ -1,0 +1,323 @@
+body {
+    /* Fuentes: Se recomienda usar una pila de fuentes para compatibilidad */
+    font-family: Arial, sans-serif;
+    
+    /* Colores y espaciado global */
+    background-color: #000000; /* Fondo principal negro */
+    margin: 0; /* Elimina el margen predeterminado del navegador */
+    padding: 0; /* Elimina el padding predeterminado del navegador */
+
+    /* Configuración de la imagen de fondo */
+    background-image: url('../imagenes/FONDO.jpg');
+    background-size: cover; /* Cubre todo el área sin distorsionar la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center; /* Centra la imagen de fondo */
+    background-attachment: fixed; /* Mantiene la imagen de fondo fija al hacer scroll */
+
+    /* Configuración de Flexbox para un layout de página completa (sticky footer opcional) */
+    display: flex; /* Habilita flexbox para el cuerpo */
+    flex-direction: column; /* Apila los elementos hijos (header, main, footer) verticalmente */
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos el 100% del alto de la ventana */
+}
+
+/*
+ * ========================================
+ * Estilos para la sección principal (Main)
+ * ========================================
+ */
+main {
+    /*
+     * Nota: El margen 'margin: 10px 550px;' es muy fijo y no es responsive.
+     * Es mejor usar un ancho máximo y centrar con 'margin: 0 auto;'
+     * o controlar el ancho de los contenedores internos.
+     * Aquí se ha ajustado para una aproximación más flexible.
+     */
+    flex-grow: 1; /* Permite que el contenido principal ocupe el espacio disponible */
+    max-width: 1200px; /* Ancho máximo para el contenido principal */
+    margin: 10px auto; /* Centra el contenido horizontalmente y añade margen superior/inferior */
+    padding: 0 20px; /* Añade padding a los lados para pantallas más pequeñas */
+    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+}
+
+
+/*
+ * ========================================
+ * Estilos de la Sección Hero (Imagen principal y texto introductorio)
+ * ========================================
+ */
+.hero-section {
+    display: flex;
+    flex-direction: column; /* Por defecto, apilados en pantallas pequeñas */
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px); /* Ajusta la altura según el header/footer */
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px); /* Rayas verticales sutiles */
+    background-size: 10px 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .hero-section {
+        flex-direction: row; /* Diseño en fila para pantallas más grandes */
+        text-align: left;
+    }
+}
+
+.hero-image-container {
+    max-width: 90%;
+    margin-bottom: 30px;
+
+    /* Animación de entrada */
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .hero-image-container {
+        max-width: 50%;
+        margin-bottom: 0;
+    }
+}
+
+.hero-image-container.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hero-image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.hero-text {
+    max-width: 100%;
+    /* Corrección: La opacidad debe ser un valor entre 0 y 1, no '5px' */
+    opacity: 0; /* Estado inicial para la animación */
+    transform: translateX(-50px);
+    transition: opacity 1s ease-in-out 0.3s, transform 1s ease-in-out 0.3s; /* Retraso para animación escalonada */
+}
+
+@media (min-width: 768px) {
+    .hero-text {
+        max-width: 40%;
+        margin-left: 40px;
+    }
+}
+
+.hero-text.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hero-text p {
+    font-size: 1.6em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.hero-text p:last-child {
+    font-style: italic;
+    color: white;
+    margin-bottom: 0;
+}
+
+.hero-text a{
+    margin: 50px 0 0 0;
+    font-size: 25px;
+    background-color: transparent;
+    border: 2px solid; 
+    color: rgb(220, 211, 203)
+}
+
+/*
+ * ========================================
+ * Estilos de la Sección de Características (Productos/Platos Destacados)
+ * ========================================
+ */
+.features-section {
+    padding: 60px 20px; /* Más padding para esta sección */
+    background-image: linear-gradient(to right, rgba(134, 93, 4, 0.932) 1px, transparent 1px);
+    background-size: 15px 100%; /* Patrón de rayas más denso */
+}
+
+.feature-grid {
+    display: grid;
+    gap: 40px; /* Espacio entre los ítems de características */
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+}
+
+@media (min-width: 768px) {
+    .feature-grid {
+        /* 2 o 3 columnas en tablets/escritorios, ajustándose automáticamente */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .feature-grid {
+        grid-template-columns: repeat(3, 1fr); /* Exactamente 3 columnas en escritorios grandes */
+    }
+}
+
+.feature-item {
+    background-color: rgb(25, 25, 31); /* Fondo para cada ítem */
+    padding: 35px;
+    border-radius: 8px;
+    
+    display: flex;
+    flex-direction: column; /* Imagen y texto apilados verticalmente por defecto */
+    align-items: center;
+    text-align: center; /* Centra el texto dentro del ítem */
+
+    /* Estado inicial para la animación de entrada */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 0.3s ease;
+    cursor: pointer; /* Indica que el elemento es interactivo */
+    position: relative; /* Necesario para z-index al superponerse en hover */
+    z-index: 1; /* Z-index por defecto */
+}
+
+.feature-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efecto hover para los ítems de características */
+
+.feature-image-container {
+    width: 100%;
+    max-width: 250px; /* Controla el tamaño de la imagen dentro del ítem */
+    margin-bottom: 20px;
+}
+
+.feature-image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(134, 93, 4, 0.932);
+}
+
+.feature-text h3 {
+    /* Corrección: 'go' no es un color válido, se usó 'gold' como en el HTML */
+    color: rgb(157, 111, 11); /* Encabezado dorado/amarillo */
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold; 
+}
+
+.feature-text p {
+    font-size: 0.97em;
+    color: #cccccc;
+    margin-bottom: 0;
+}
+
+/*
+ * ========================================
+ * Ajustes Responsivos (Media Queries)
+ * ========================================
+ * Estos estilos se aplican para diferentes tamaños de pantalla.
+ */
+@media (max-width: 768px) {
+    /* Ajustes generales para pantallas medianas (tabletas) */
+    .sumaq-header { /* Si este es el header real, asegúrate de que el HTML tenga esta clase */
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links { /* Si estos son los enlaces de navegación, ajusta la clase si es diferente */
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links a {
+        margin: 5px 10px;
+    }
+
+    .hero-section {
+        padding: 30px 15px;
+        flex-direction: column;
+    }
+
+    .hero-image-container, .hero-text {
+        max-width: 100%;
+        margin-left: 0;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .hero-text p {
+        font-size: 1.4em;
+    }
+
+    /* Ajustes para ítems de características en pantallas medianas */
+    .feature-item {
+        padding: 20px;
+    }
+    .feature-image-container {
+        margin-bottom: 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-left, .footer-right {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes generales para pantallas pequeñas (móviles) */
+    .sumaq-header { /* Si este es el header real, asegúrate de que el HTML tenga esta clase */
+        padding: 10px;
+    }
+    .sumaq-logo { /* Si este es el logo, ajusta la clase si es diferente */
+        font-size: 1.2em;
+    }
+    .sumaq-logo span {
+        font-size: 0.5em;
+    }
+    .nav-links a {
+        margin-left: 10px;
+        font-size: 0.9em;
+    }
+    .nav-links .contact-button {
+        padding: 6px 10px;
+    }
+
+    .hero-section {
+        padding: 20px 10px;
+    }
+
+    .hero-text p {
+        font-size: 1.2em;
+    }
+    .container-footer span, .container-footer nav a { /* Ajustado */
+        font-size: 0.8em;
+    }
+
+    /* Ajustes para ítems de características en pantallas muy pequeñas */
+    .features-section {
+        padding: 30px 15px;
+    }
+    .feature-item {
+        padding: 15px;
+    }
+    .feature-text h3 {
+        font-size: 1.3em;
+    }
+    .feature-text p {
+        font-size: 0.85em;
+    }
+}

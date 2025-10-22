@@ -1,0 +1,153 @@
+*{
+font-family: "WDXL Lubrifont TC", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Estilos para la imagen del logo */
+.img-logo {
+    width: 250px; 
+    height: 150px;
+    display: block; 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 0.3s ease;
+    
+}
+.img-logo:hover{
+    transform: scale(1.15) translateY(-5px); /* Escala y eleva ligeramente */
+}
+
+.container {
+    max-width: auto;
+    margin: 0 100px;
+    background-color: transparent; 
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+/* Estilo del menú de navegación */
+nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 2px;
+    background-color: transparent;
+    font-size: 25px;
+}
+
+.nav-right {
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    transition: transform 0.5s ease;
+}
+
+nav ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0; 
+    display: flex; 
+    transition: transform 0.5s ease;
+}
+
+nav ul li {
+    margin: 0 8px; 
+}
+nav ul li:hover{
+    transition: transform 0.5s ease;
+    transform: scale(1.15) translateY(-5px); /* Escala y eleva ligeramente */
+}
+
+nav ul li a {
+    color: rgb(220, 211, 203); 
+    text-decoration: none; 
+    padding: 5px; 
+
+    font-family: "WDXL Lubrifont TC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    text-underline-offset: 4px; 
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; 
+    text-underline-offset: 4px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: translateY(-5px) scale(1.50); /* Sube y aumenta 10% */
+    color: #d4a017;
+}
+
+.img-ig{
+    width: 100px;
+    height: 60px;
+    margin-top: 10px;
+    transition: transform 0.5s ease;
+    
+}
+.img-ig:hover{
+    transform: scale(1.15) translateY(-5px); /* Escala y eleva ligeramente */
+}
+
+.btn-reservar {
+    color: rgb(220, 211, 203);
+    background-color: rgba(228, 131, 70, 0.657); 
+    padding: 10px 35px; 
+    font-weight: bold; 
+    text-decoration: none; 
+    border-radius: 3px; 
+    transition: transform 1s ease; 
+    display: inline-block; 
+}
+
+.btn-reservar:hover {
+    transform: scale(1.05); 
+    transform: rotateY(360deg);
+}
+
+/* Estilo del footer */
+footer {
+    background-color: transparent; 
+    color: rgb(220, 211, 203); 
+    padding: 0 0; 
+    text-align: center; 
+    width: 100%; 
+    box-sizing: border-box;
+    margin-bottom: 35px;
+}
+
+.container-footer { 
+    border-top: 2px solid; 
+    max-width: auto;
+    margin: 0 230px;
+    padding: 0; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+footer span {
+    display: block; 
+    padding: 1px 0;
+    
+}
+
+footer nav a {
+    text-decoration: none; 
+    color: rgb(211, 203, 220); 
+    transition: transform 0.9s ease;
+}
+footer nav a:hover {
+    text-decoration: underline; 
+    text-underline-offset: 4px;
+    transform: translateY(-5px) scale(1.30); /* Sube y aumenta 10% */
+    color: #d4a017;
+}
+
